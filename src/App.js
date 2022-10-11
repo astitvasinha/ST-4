@@ -52,27 +52,27 @@ export const App = () => {
 
   return (
     <div className='wrapper'>
-      <h1>BookList App</h1>
-      <p>Add and view your books using local storage</p>
+      <h1>Ticket booking</h1>
+      <p>Book your tickets online</p>
       <div className='main'>
 
         <div className='form-container'>
           <form autoComplete="off" className='form-group'
             onSubmit={handleAddBookSubmit}>
-            <label>Title</label>
+            <label>Name</label>
             <input type="text" className='form-control' required
               onChange={(e) => setTitle(e.target.value)} value={title}></input>
             <br></br>
-            <label>Author</label>
+            <label>Phone no.</label>
             <input type="text" className='form-control' required
               onChange={(e) => setAuthor(e.target.value)} value={author}></input>
             <br></br>
-            <label>ISBN#</label>
+            <label>Train no.</label>
             <input type="text" className='form-control' required
               onChange={(e) => setIsbn(e.target.value)} value={isbn}></input>
             <br></br>
             <button type="submit" className='btn btn-success btn-md'>
-              ADD
+              Book Ticket
             </button>
           </form>
         </div>
@@ -83,9 +83,9 @@ export const App = () => {
               <table className='table'>
                 <thead>
                   <tr>
-                    <th>ISBN#</th>
-                    <th>Title</th>
-                    <th>Author</th>
+                    <th>Train no.</th>
+                    <th>Name</th>
+                    <th>Phone no.</th>
                     <th>Delete</th>
                   </tr>
                 </thead>
@@ -97,7 +97,7 @@ export const App = () => {
             <button className='btn btn-danger btn-md'
               onClick={() => setbooks([])}>Remove All</button>
           </>}
-          {books.length < 1 && <div>No books are added yet</div>}
+          {books.length < 1 && <div>No tickets booked yet</div>}
         </div>
 
       </div>
