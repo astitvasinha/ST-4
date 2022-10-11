@@ -6,7 +6,12 @@
 
 .wrapper{
     overflow-x: hidden;
-    overflow-y: auto;    
+    overflow-y: auto;
+    background-image: url("./components/railway.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+    height: 100vh;  
 }
 
 .wrapper h1{
